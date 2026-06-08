@@ -1,0 +1,23 @@
+{
+  "name": "restful-booker-api-tests",
+  "version": "1.0.0",
+  "description": "End-to-end API test suite for the Restful-Booker API using Postman + Newman.",
+  "scripts": {
+    "test": "newman run postman/Restful-Booker.postman_collection.json -e postman/Restful-Booker.postman_environment.json -r cli",
+    "test:report": "newman run postman/Restful-Booker.postman_collection.json -e postman/Restful-Booker.postman_environment.json -r cli,htmlextra --reporter-htmlextra-export reports/report.html"
+  },
+  "keywords": [
+    "api-testing",
+    "postman",
+    "newman",
+    "qa",
+    "rest-api",
+    "ci-cd"
+  ],
+  "author": "Bruno Moreira",
+  "license": "MIT",
+  "devDependencies": {
+    "newman": "^6.2.2",
+    "newman-reporter-htmlextra": "^1.23.1"
+  }
+}
