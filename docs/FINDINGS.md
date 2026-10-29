@@ -1,10 +1,8 @@
 # Findings & Observations
 
-Restful-Booker is intentionally seeded with bugs so testers can practise spotting them.
-The test suite **asserts the API's _actual_ behaviour** (so the build stays green and stable),
-while this document records the **_expected_ behaviour** per REST conventions. Distinguishing
-"what the API does" from "what it should do" is the core of the job — a green suite that hides
-known defects is worse than a green suite that documents them.
+This document records API behaviours observed during testing and potential improvements to response handling. The suggested outcomes below are review proposals, not confirmed requirements of this API.
+
+Some automated checks capture the observed behaviour as a regression baseline. Passing these checks does not mean the API is defect-free. Each observation should be reviewed against the API documentation and agreed requirements before being classified as a confirmed defect.
 
 ---
 
