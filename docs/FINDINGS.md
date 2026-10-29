@@ -29,6 +29,7 @@ Some automated checks capture the observed behaviour as a regression baseline. P
 | **Expected** | `404 Not Found` |
 | **Actual** | `405 Method Not Allowed` |
 | **Notes** | `405` implies the HTTP method is not supported on the resource, which is misleading — the method is supported, the resource simply does not exist. |
+| **Verification** | Manually reproduced in Postman: created a booking, deleted it (201 Created), confirmed GET returned 404 Not Found, then repeated DELETE for the same ID using the same token. The second DELETE returned 405 Method Not Allowed with body `Method Not Allowed`. |
 
 ---
 
