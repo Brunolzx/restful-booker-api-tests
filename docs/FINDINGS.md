@@ -37,7 +37,7 @@ Some automated checks capture the observed behaviour as a regression baseline. P
 | | |
 |---|---|
 | **Endpoint** | `POST /auth` |
-| **Severity** | Medium (security/contract) |
+| **Severity** | To be assessed — response-handling concern; no authentication bypass demonstrated |
 | **Steps** | 1. `POST /auth` with a wrong password |
 | **Expected** | `401 Unauthorized` |
 | **Actual** | `200 OK` with body `{ "reason": "Bad credentials" }` |
