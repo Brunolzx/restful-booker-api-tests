@@ -104,7 +104,7 @@ Every **push** and **pull request** to `main` triggers the [API Tests workflow](
 
 ## Author
 
-**Bruno Moreira** — QA Engineer · ISTQB® CTFL
+**Bruno Moreira** — Junior QA Tester
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-moreira-87439a404)
 [![Email](https://img.shields.io/badge/Email-2E8B7F?style=flat&logo=gmail&logoColor=white)](mailto:brunofbarbosam@gmail.com)
