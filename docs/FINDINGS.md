@@ -25,7 +25,7 @@ Some automated checks capture the observed behaviour as a regression baseline. P
 |---|---|
 | **Endpoint** | `DELETE /booking/:id` (unknown id) |
 | **Severity** | Low |
-| **Steps** | 1. Authenticate · 2. `DELETE /booking/9999999` |
+| **Steps** | 1. Authenticate and obtain a valid token. 2. Create a booking and record its ID. 3. Delete that booking using the token. 4. Confirm that GET /booking/:id returns 404. 5. Send DELETE /booking/:id again using the same valid token and record the response. |
 | **Expected** | `404 Not Found` |
 | **Actual** | `405 Method Not Allowed` |
 | **Notes** | `405` implies the HTTP method is not supported on the resource, which is misleading — the method is supported, the resource simply does not exist. |
