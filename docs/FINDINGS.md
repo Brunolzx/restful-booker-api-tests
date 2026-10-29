@@ -11,7 +11,8 @@ Some automated checks capture the observed behaviour as a regression baseline. P
 | | |
 |---|---|
 | **Endpoint** | `DELETE /booking/:id` |
-| **Severity** | Low (functional behaviour is correct; status code is wrong) |
+| **Severity** | To be assessed — deletion succeeds, but the response status merits review |
+| **Suggested behaviour** | `200 OK` or `204 No Content` would better communicate a successful deletion. This is a proposed improvement, not a verified requirement of this API. |
 | **Steps** | 1. Authenticate and obtain a token · 2. Create a booking · 3. Send `DELETE /booking/:id` with the token |
 | **Expected** | `200 OK` or `204 No Content` |
 | **Actual** | `201 Created` |
