@@ -41,6 +41,6 @@ Some automated checks capture the observed behaviour as a regression baseline. P
 | **Endpoint** | `POST /auth` |
 | **Severity** | To be assessed — response-handling concern; no authentication bypass demonstrated |
 | **Steps** | 1. `POST /auth` with a wrong password |
-| **Expected** | `401 Unauthorized` |
+| **Suggested behaviour** | Consider an appropriate non-2xx response for rejected credentials, consistent with the API's authentication contract. The required status code has not yet been verified against the specification. |
 | **Actual** | `200 OK` with body `{ "reason": "Bad credentials" }` |
 | **Notes** | Returning `200` for a failed authentication is poor practice: clients that only check the status code would treat the call as successful. The failure is only detectable by inspecting the response body. The suite asserts both the (quirky) status code and the absence of a token. |
