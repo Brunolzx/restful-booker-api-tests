@@ -26,7 +26,7 @@ Some automated checks capture the observed behaviour as a regression baseline. P
 | **Endpoint** | `DELETE /booking/:id` (unknown id) |
 | **Severity** | Low |
 | **Steps** | 1. Authenticate and obtain a valid token. 2. Create a booking and record its ID. 3. Delete that booking using the token. 4. Confirm that GET /booking/:id returns 404. 5. Send DELETE /booking/:id again using the same valid token and record the response. |
-| **Expected** | `404 Not Found` |
+| **Suggested behaviour** | `404 Not Found` would clearly indicate that the booking does not exist. This is a proposed improvement, not a verified requirement of this API. |
 | **Actual** | `405 Method Not Allowed` |
 | **Notes** | `405` implies the HTTP method is not supported on the resource, which is misleading — the method is supported, the resource simply does not exist. |
 | **Verification** | Manually reproduced in Postman: created a booking, deleted it (201 Created), confirmed GET returned 404 Not Found, then repeated DELETE for the same ID using the same token. The second DELETE returned 405 Method Not Allowed with body `Method Not Allowed`. |
