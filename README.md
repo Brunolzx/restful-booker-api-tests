@@ -24,7 +24,7 @@ End-to-end API test suite for the [Restful-Booker API](https://restful-booker.he
 - **Request chaining** — capture `bookingid` and `token` from responses and feed them into later requests via collection variables
 - **Layered assertions** — status codes, response time, headers, **JSON schema**, and **specific field values** (not just "is the API alive?")
 - **Negative testing** — invalid credentials, missing token, and non-existent resources
-- **Defect awareness** — the API is intentionally buggy; real bugs are recorded in [`docs/FINDINGS.md`](docs/FINDINGS.md) while the suite asserts actual behaviour to stay green
+- **Behaviour analysis** — observed API responses and potential improvements are recorded in [docs/FINDINGS.md](docs/FINDINGS.md), distinguishing reproduced behaviour from requirements that still need verification.
 - **CI/CD** — GitHub Actions runs the full suite on every push & PR and publishes an HTML report
 
 ---
